@@ -1,0 +1,37 @@
+.board {
+  border-style: solid;
+}
+
+.grid {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+button.grid {
+  border-color: #dddddd;
+  /* font-weight: bold; */
+  /* color: #777777; */
+  /* font-size: 400%; */
+  /* font-size: 25px; */
+  /* padding-top: 5px; */
+}
+
+div.grid {
+  border-style: solid;
+  background-color: #aaaaaa;
+}
+
+.grid-color {
+  background-color: aquamarine;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.mine {
+  background-color: #a30000
+}

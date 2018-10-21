@@ -1,0 +1,26 @@
+.grid {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 5px;
+  vertical-align: top;
+}
+
+button.grid {
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+
+div.grid {
+  border-style: solid;
+}
+
+div.white{
+  background-color: #ffffff;
+}
+
+div.grey{
+  background-color: #aaaaaa;
+  font-size: 30px;
+}
+
