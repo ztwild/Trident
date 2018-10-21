@@ -8,13 +8,12 @@ const host = "localhost";
 const port = 8888;
 
 // MongoDb
-// const mongoApi = require('./mongoApi');
+const mongoApi = require('./mongoApi');
 const mongoUrl = "mongodb://localhost:27017/";
 const dbName = "trident";
 const cardCollection = "cards";
 const logCollection = "logs";
-// const db = new mongoApi(mongoUrl, dbName);
-const db = require('./mongoApi');
+const db = new mongoApi(mongoUrl, dbName);
 
 
 // app.use((req, res, next) => {
@@ -34,11 +33,13 @@ http.createServer(app).listen(port, () => {
 app.get('/card/catalog', (req, res) => {
   console.log("getting catalog....");
   const params = [{}, {}, 5];
-  // throw new Error('test error!!!!');
   const connection = db.dbConnection(db.dbQuery, cardCollection, params);
   connection.then(
     (result) => { res.send(result) }, 
-    (err) => { console.log(`error connecting to mongodb: ${err}`); throw err; }
+    (err) => { 
+      console.log(`error connecting to mongodb: ${err}`); 
+      throw err; 
+    }
   );
 });
 
