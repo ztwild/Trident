@@ -1,16 +1,12 @@
 import axios from 'axios';
 // "proxy": "http://localhost:8888"
-// const url = "http://localhost:8888";
+const url = "http://localhost:8888";
 
 export class CardsApi {
-  // const config = {
-    //   headers: {'X-Requested-With': 'HttpRequest'},
-    // }
-    // axios.put(`${url}/card`, { card })
 
   static instertCard(card) {
     return new Promise((resolve, reject) => {
-      axios.put("/card", { card })
+      axios.put(`${url}/card`, { card })
       .then(() => {
         resolve();
       })
@@ -22,7 +18,7 @@ export class CardsApi {
 
   static GetCards() {
     return new Promise((resolve, reject) => {
-      axios.get("/card/catalog")
+      axios.get(`${url}/card/catalog`)
       .then(res => {
         resolve(res.data);
       })
@@ -30,6 +26,10 @@ export class CardsApi {
         reject(error);
       });
     });
+  }
+
+  static getSpotifyToken() {
+
   }
 }
 

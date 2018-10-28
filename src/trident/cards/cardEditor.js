@@ -15,8 +15,8 @@ const initCard = {
   hp: "",
   move: "",
   range: "",
-  armorSlots: 0,
-  weaponSlots: 0
+  armorSlots: "",
+  weaponSlots: ""
 }
 
 export class CardEditor extends Component {
@@ -56,7 +56,9 @@ export class CardEditor extends Component {
 
   handleChange(e) {
     var card = clone(this.state.card);
-    card[e.currentTarget.id] = e.target.value;
+    var value =  e.target.value;
+    card[e.currentTarget.id] = Number(value) || value;
+    debugger
     this.setState({card});
   }
 
@@ -66,7 +68,7 @@ export class CardEditor extends Component {
         <div className="frame-editor">
           <img 
             id="image"
-            className="profile-editor"
+            className="profile"
             src={this.state.card.url}
             alt=""
             />

@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import Api from './cardApi';
+import './style.css';
+
+const style = {
+  // width: "1000px"
+}
 
 export class Library extends Component {
   constructor(props) {
@@ -13,21 +18,26 @@ export class Library extends Component {
 
   componentDidMount() {
      Api.GetCards()
-    .then(cards => this.setState({ cards }))
+    .then(cards => { this.setState({ cards }) })
     .catch(error =>  this.setState({ error }));
   }
 
   render() {
-    debugger
     return(
-      <div>
-       {this.state.cards.map((e, i) => {
-         return(
-         <label 
-          key={i}
-          style={{color: "#ffffff"}}
-          >{JSON.stringify(e)}</label>);
-       })}
+      <div style={{...style}}>
+        {this.state.cards.map((e, i) => {
+          return(
+            <div key={i} className="align" >
+              <div className="frame-library">
+                <img
+                  // id="image"
+                  className="profile"
+                  src={e.url}
+                  alt=""/>
+              </div>
+              <label>{e.name}</label>
+            </div>
+        )})}
       </div>
     );
   }

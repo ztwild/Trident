@@ -27,7 +27,7 @@ module.exports = class MongoApi {
 
   dbInsert(client, dbCollection, items) {
     return new Promise((resolve, reject) => {
-      client.db(_dbName).collection(dbCollection).insert(items, (err, result) => {
+      client.db(_dbName).collection(dbCollection).insertMany(items, (err, result) => {
         err && reject(err);
         resolve("success");
       });
@@ -57,5 +57,6 @@ module.exports = class MongoApi {
   }
 
 
-
 }
+
+

@@ -4,7 +4,6 @@
   "author": "Zach Wild",
   "private": true,
   "main": "public/electron.js",
-  "proxy": "http://localhost:8888",
   "homepage": "./",
   "build": {
     "appId": "com.example.electron-cra",

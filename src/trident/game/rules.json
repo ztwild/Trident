@@ -1,0 +1,12 @@
+{
+  "actionPts": 8,
+  "actionPtsReplenish": true,
+  "actionPtsAccumulate": false,
+  "gridSize": {"x": 10, "y": 10},
+  "deckSize": {"min": 20, "max": 30},
+  "handSize": 5,
+  "turnDraw": true,
+  "timer": 60000,
+  "drawPts": 4,
+  "drawPerTurn": 1
+}

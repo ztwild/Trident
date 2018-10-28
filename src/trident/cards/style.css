@@ -14,18 +14,22 @@ div.card {
 .frame {
   width: 100px;
   height: 100px;
-  border-radius: 3px;
 }
 
-.profile {
+img.profile {
   object-fit: cover;
-  width: 120px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  
+  /* border-width: 3px; */
+  /* width: 120px; */
   /* height: 120px; */
   /* width: 100%; */
-  margin-right: -30px;
-  margin-left: -30px;
-  border: solid;
-  border-radius: 3px;
+  /* margin-right: -30px; */
+  /* margin-left: -30px; */
+  /* border: solid; */
 }
 
 .frame-editor {
@@ -34,16 +38,51 @@ div.card {
   border-style: solid;
   border-color: #000000;
   border-radius: 10px;
-  display: inline-block;
-  vertical-align: top;
   /* overflow: hidden; */
 }
 
-img.profile-editor {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.align:hover {
+  background: #aaaaaa;
+  border-color:#eeeeee;
+  color: #444444;
+  transition: .2s;
 }
+
+.align {
+  display: inline-block;
+  vertical-align: top;
+  width: 110px;
+  height: 150px;
+  text-align: center;
+  font-size: 10px;
+  
+  color: #000000;
+  background: linear-gradient(to bottom right, #444444 25%, #666666 100%);
+  border-color: #000000;
+  border-style: solid;
+  border-radius: 10px;
+
+  padding-top: 5px;
+  margin: 2px;
+  /* margin-bottom: 2px; */
+  
+  /* borderWidth:"1px"; */
+  /* font: "" */
+}
+
+
+
+.frame-library {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 auto;
+  /* border-color: #000000; */
+  /* border-radius: 10px; */
+  /* overflow: hidden; */
+}
+
+
 
 .rare {
   background-color: #00a2ff;
