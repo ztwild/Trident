@@ -1,4 +1,5 @@
 import { SEND_MESSAGE_START } from './chatActions';
+import { clone } from '../utils/deepClone';
 
 const initialState = {
   messages: [
@@ -18,7 +19,7 @@ const initialState = {
 
 const chatReducer = (state = initialState, action) => {
   if(action.type === SEND_MESSAGE_START){
-    var newState = { ...state };
+    var newState = clone(state);
     newState.messages.unshift({message: action.payload});
     return newState;
   }

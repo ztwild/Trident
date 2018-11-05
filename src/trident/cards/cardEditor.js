@@ -58,7 +58,6 @@ export class CardEditor extends Component {
     var card = clone(this.state.card);
     var value =  e.target.value;
     card[e.currentTarget.id] = Number(value) || value;
-    debugger
     this.setState({card});
   }
 

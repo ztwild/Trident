@@ -1,10 +1,11 @@
 import axios from 'axios';
-// "proxy": "http://localhost:8888"
-const url = "http://localhost:8888";
+import store from '../../store/store';
 
 export class CardsApi {
 
   static instertCard(card) {
+    const {connection: {hostname: host}} = store.getState();
+    const url = `http://${host}:8888`;
     return new Promise((resolve, reject) => {
       axios.put(`${url}/card`, { card })
       .then(() => {
@@ -17,6 +18,8 @@ export class CardsApi {
   }
 
   static GetCards() {
+    const {connection: {hostname: host}} = store.getState();
+    const url = `http://${host}:8888`;
     return new Promise((resolve, reject) => {
       axios.get(`${url}/card/catalog`)
       .then(res => {

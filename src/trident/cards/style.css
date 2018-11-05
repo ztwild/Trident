@@ -16,6 +16,27 @@ div.card {
   height: 100px;
 }
 
+.frame-editor {
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  height: 300px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 10px;
+  /* overflow: hidden; */
+}
+
+.frame-library {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 auto;
+  /* border-color: #000000; */
+  /* border-radius: 10px; */
+  /* overflow: hidden; */
+}
+
 img.profile {
   object-fit: cover;
   width: 100%;
@@ -32,13 +53,12 @@ img.profile {
   /* border: solid; */
 }
 
-.frame-editor {
-  width: 300px;
-  height: 300px;
-  border-style: solid;
-  border-color: #000000;
-  border-radius: 10px;
-  /* overflow: hidden; */
+.hand {
+  position: absolute;
+}
+
+.hand:hover {
+  z-index: 1;
 }
 
 .align:hover {
@@ -72,15 +92,7 @@ img.profile {
 
 
 
-.frame-library {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  margin: 0 auto;
-  /* border-color: #000000; */
-  /* border-radius: 10px; */
-  /* overflow: hidden; */
-}
+
 
 
 

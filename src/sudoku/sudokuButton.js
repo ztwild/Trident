@@ -9,7 +9,6 @@ export class SudokuButton extends Component {
   }
 
   render(){
-    debugger
     return (
       <div className={`grid ${this.props.element ? "grey" : "white"}`}>
         {this.props.element}

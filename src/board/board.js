@@ -38,12 +38,10 @@ export class Board extends Component {
 
   render(){
     return (
-      <div>
-        { 
-          this.props.gameStatus === WINNER ? 
+      <div style={this.props.style}>
+        { this.props.gameStatus === WINNER ? 
           <h1>{this.props.gameStatus}</h1> :
-          this.getBoard()
-        }
+          this.getBoard() }
       </div>
     );
   }

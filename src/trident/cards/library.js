@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './card';
 import Api from './cardApi';
 import './style.css';
 
@@ -27,16 +28,7 @@ export class Library extends Component {
       <div style={{...style}}>
         {this.state.cards.map((e, i) => {
           return(
-            <div key={i} className="align" >
-              <div className="frame-library">
-                <img
-                  // id="image"
-                  className="profile"
-                  src={e.url}
-                  alt=""/>
-              </div>
-              <label>{e.name}</label>
-            </div>
+            <Card key={i} card={e}/>
         )})}
       </div>
     );

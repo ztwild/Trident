@@ -1,31 +1,38 @@
 import React, { Component } from 'react';
-// import {clone} from '../utils/deepClone';
 import './style.css';
-
-const imgPath = '../../pics/mage01.jpg';
 
 export class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = { }
   }
 
   getStyle() {
-    return {
-      objectPosition: `${this.props.card.x}px ${this.props.card.y}px`,
-      // zoom: `${this.props.card.zoom}%`
-    }
+    const index = this.props.index;
+    return(
+      index === undefined ? 
+      { } :
+      {
+        left: `${index * 50}px`,
+      }
+    )
+  }
+
+  getClassName() {
+    const overlap = this.props.index !== undefined;
+    return `align ${overlap ? "hand" : ""}`;
+    // return "align";
   }
 
   render() {
     return(
-      <div className="card">
-        <div className="frame">
-          <img className="profile"
-          src={this.props.card.url}
-          // style={this.getStyle()}
-          />
+      <div className={this.getClassName()} style={this.getStyle()}>
+        <div className="frame-library">
+          <img
+            className="profile"
+            src={this.props.card.url}
+            alt=""/>
         </div>
+        <label>{this.props.card.name}</label>
       </div>
     )
   }

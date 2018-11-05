@@ -14,11 +14,9 @@ export default class ChatApi {
       }
     })
     .then(res => {
-      debugger;
       console.log(`success: ${res}`);
     })
     .catch(err => {
-      debugger;
       console.log(`error: ${err}`);
     });
   }

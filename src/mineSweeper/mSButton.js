@@ -9,7 +9,6 @@ export class MineSweeperButton extends Component {
   }
 
   render(){
-    debugger;
     return (
       this.props.element.visible ? 
       <div className="grid">
